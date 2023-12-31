@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Модальне вікно</title>
+  <style>
+    /* Сховати модальне вікно за замовчуванням */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.4);
+    }
+
+    /* Стилі для вмісту модального вікна */
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Кнопка для відображення модального вікна -->
+<button onclick="openModal()">Відкрити модальне вікно</button>
+
+<!-- Модальне вікно -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span onclick="closeModal()" style="float: right; cursor: pointer;">&times;</span>
+    <p>Вміст модального вікна тут...</p>
+  </div>
+</div>
+
+<script>
+// Функція для відображення модального вікна
+function openModal() {
+  document.getElementById('myModal').style.display = 'block';
+}
+
+// Функція для закриття модального вікна
+function closeModal() {
+  document.getElementById('myModal').style.display = 'none';
+}
+
+// Закриття модального вікна при кліку поза ним
+window.onclick = function(event) {
+  var modal = document.getElementById('myModal');
+  if (event.target === modal) {
+    modal.style.display = 'none';
+  }
+}
+</script>
+
+</body>
+</html>
