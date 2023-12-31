@@ -468,13 +468,19 @@
         <div class="section-contacts">
       <span onclick="closeModal()" style="float: right; cursor: pointer;">&times;</span>
       <h2 class="data-title">Онлайн-запис</h2>
-      <form class="data-form" action="">
-          <input class="data-input" placeholder="ім'я*" type="text">
-          <input class="data-input" placeholder="телефон*" type="text">
-          <textarea class="data-input data-input-third" placeholder="повідомлення" name="" id="#" cols="65" rows="4" ></textarea>
+      <form class="data-form" action="https://formspree.io/f/xyyqganp"
+      method="POST">
+        <label>
+          <input class="data-input" placeholder="імя*" type="text" name="name">
+        </label>
+        <label>
+          <input class="data-input" placeholder="телефон*" type="text" name="tell">
+        </label>
+          <textarea class="data-input data-input-third" placeholder="повідомлення" name="message" id="#" cols="65" rows="4" ></textarea>
+        <input type="submit" class="data-btn" value="відправити">
       </form>
 
-  <button class="data-btn">відправити</button>
+
 </div>
     </div>
   </div>
